@@ -395,6 +395,11 @@ const ALL_INFO = 27;
 window.doneSet = new Set();
 window.twitTags = new Set();
 
+
+window.al = function() {
+	alert(State.variables.done);
+};
+
 window.triggBelow = function() {
 	$(".below").trigger("change_vis", State.variables.below);
 };
@@ -1664,7 +1669,7 @@ $(document).on(&quot;:passagerender&quot;, function (ev1) {
 </tw-passagedata><tw-passagedata pid="20" name="Готовое резюме" tags="" position="1566,1372" size="100,100">&lt;&lt;link &quot;Назад&quot;&gt;&gt;
 	&lt;&lt;replace &quot;.above&quot;&gt;&gt;&lt;&lt;include &quot;Профиль&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-
+&lt;&lt;run al()&gt;&gt;
 &lt;&lt;if $done == 1&gt;&gt;
 &lt;div&gt;
 	&lt;div class=&quot;section&quot;&gt;
