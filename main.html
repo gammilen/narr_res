@@ -482,7 +482,7 @@ window.showPopupTwit = function (id) {
 		}
 	}
 };
-</script><tw-passagedata pid="1" name="First" tags="" position="299.66666666666663,423.00000000000006" size="100,100">&lt;&lt;set $stop to 0&gt;&gt;
+</script><tw-passagedata pid="1" name="First" tags="" position="299.66666666666663,416.33333333333337" size="100,100">&lt;&lt;set $stop to 0&gt;&gt;
 &lt;&lt;set $below to 1&gt;&gt;
 
 
@@ -574,13 +574,10 @@ function check_done(content) {
 	  State.variables.info_twit = 0;
 	  State.variables.below = 1;
 	  State.variables.stop = 0;
+	  State.variables.done = 1;
 	  triggBelow();
 	  triggAbove();
-	}
-	if (State.variables.twit_done == 1 &amp; State.variables.steam_done == 1) {
-		State.variables.done = 1;
-	}
-	
+	}	
 };
 
 $(document).on(&quot;:passagerender&quot;, function (ev1) {
@@ -1664,11 +1661,11 @@ $(document).on(&quot;:passagerender&quot;, function (ev1) {
 	&lt;/table&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="20" name="Готовое резюме" tags="" position="1571,1372" size="100,100">&lt;&lt;link &quot;Назад&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="20" name="Готовое резюме" tags="" position="1566,1372" size="100,100">&lt;&lt;link &quot;Назад&quot;&gt;&gt;
 	&lt;&lt;replace &quot;.above&quot;&gt;&gt;&lt;&lt;include &quot;Профиль&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
-&lt;&lt;if $done&gt;&gt;
+&lt;&lt;if $done == 1&gt;&gt;
 &lt;div&gt;
 	&lt;div class=&quot;section&quot;&gt;
 	&lt;h2&gt;Шкарева Алена Дмитриевна&lt;/h2&gt;
