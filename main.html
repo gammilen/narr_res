@@ -482,7 +482,7 @@ window.showPopupTwit = function (id) {
 		}
 	}
 };
-</script><tw-passagedata pid="1" name="First" tags="" position="301.3333333333333,419.6666666666667" size="100,100">&lt;&lt;set $stop to 0&gt;&gt;
+</script><tw-passagedata pid="1" name="First" tags="" position="299.66666666666663,423.00000000000006" size="100,100">&lt;&lt;set $stop to 0&gt;&gt;
 &lt;&lt;set $below to 1&gt;&gt;
 
 
@@ -500,6 +500,7 @@ window.showPopupTwit = function (id) {
 &lt;&lt;set $currInfo_twit to 0&gt;&gt;
 &lt;&lt;set $lim_twit to 6&gt;&gt;
 &lt;&lt;set $twit_done to 0&gt;&gt;
+&lt;&lt;set $steam_done to 1&gt;&gt;
 &lt;&lt;set $done to 0&gt;&gt;
 
 &lt;div class=&quot;above&quot;&gt;
@@ -518,7 +519,6 @@ var event2 = new Event(&#39;change_stop&#39;);
 function prepare (content) {	
 	var below = content.find(&quot;div.below&quot;);
 	var above = content.find(&quot;div.above&quot;);
-	console.log(above);
 	below.on(&quot;change_vis&quot;, function (e, is_b) {
 		if (is_b == 0) {
 		  if (!below.is(&quot;:hidden&quot;)) {
